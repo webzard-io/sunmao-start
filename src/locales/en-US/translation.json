@@ -1,0 +1,18 @@
+{
+  "input_username": "Please input the username.",
+  "input_password": "Please input the password.",
+  "login": "Login",
+  "form": "Form",
+  "chart": "Chart",
+  "name": "Name",
+  "area": "Area",
+  "submit": "Submit",
+  "beijing": "Beijing",
+  "london": "London",
+  "newYork": "NewYork",
+  "placeholder": "Please input the name.",
+  "submit_success": "Submit success!",
+  "line": "Line",
+  "bar": "Bar",
+  "pie": "Pie"
+}
