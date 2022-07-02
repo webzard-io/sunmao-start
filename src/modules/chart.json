@@ -1,0 +1,254 @@
+{
+  "kind": "Module",
+  "parsedVersion": {
+    "category": "custom/v1",
+    "value": "myModule1"
+  },
+  "version": "custom/v1",
+  "metadata": {
+    "name": "chart",
+    "description": "my module"
+  },
+  "spec": {
+    "stateMap": {},
+    "events": [],
+    "properties": {},
+    "exampleProperties": {
+      "lang": "en-US",
+      "fetch_data": "{{{\n  fetch: {\n    data: [\n  {\n    \"page\": 1,\n    \"pages\": 1,\n    \"per_page\": 100,\n    \"total\": 60,\n    \"sourceid\": \"2\",\n    \"sourcename\": \"World Development Indicators\",\n    \"lastupdated\": \"2022-06-30\"\n  },\n  [\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2019\",\n      \"value\": 5.25119484213676,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2018\",\n      \"value\": 5.46464147951531,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2017\",\n      \"value\": 5.56487285598406,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2016\",\n      \"value\": 5.7859660928498,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2015\",\n      \"value\": 5.90440035935373,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2014\",\n      \"value\": 6.22416584317019,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2013\",\n      \"value\": 5.61745581404834,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2012\",\n      \"value\": 5.65943576587855,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2011\",\n      \"value\": 5.94439536961029,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2010\",\n      \"value\": 6.1069555569913,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2009\",\n      \"value\": 5.92926121904919,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2008\",\n      \"value\": 7.01438185665673,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2007\",\n      \"value\": 7.47673259076152,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2006\",\n      \"value\": 7.08211587484831,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2005\",\n      \"value\": 7.10594215241237,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2004\",\n      \"value\": 7.77560500846361,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2003\",\n      \"value\": 6.81961052712022,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2002\",\n      \"value\": 10.1274348886103,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2001\",\n      \"value\": 9.67346678620104,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"2000\",\n      \"value\": 9.49161127051312,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1999\",\n      \"value\": 8.97598220189409,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1998\",\n      \"value\": 8.70546629315215,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1997\",\n      \"value\": 8.92550407434577,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1996\",\n      \"value\": 4.99984533945626,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1995\",\n      \"value\": 6.03815218956197,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1994\",\n      \"value\": 5.83334412786162,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1993\",\n      \"value\": 5.22315405221537,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1992\",\n      \"value\": 4.37627368670662,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1991\",\n      \"value\": 2.89535016559989,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1990\",\n      \"value\": 2.82853711795335,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1989\",\n      \"value\": 2.44789593750488,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1988\",\n      \"value\": 2.708788742837,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1987\",\n      \"value\": 2.53578216157475,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1986\",\n      \"value\": 2.02920553023302,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1985\",\n      \"value\": 1.80265454326677,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1984\",\n      \"value\": 2.18044857733616,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1983\",\n      \"value\": 1.93899305235266,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1982\",\n      \"value\": 2.21171516810616,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1981\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1980\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1979\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1978\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1977\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1976\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1975\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1974\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1973\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1972\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1971\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1970\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1969\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1968\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1967\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1966\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1965\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1964\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1963\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1962\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1961\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    },\n    {\n      \"indicator\": {\n        \"id\": \"BG.GSR.NFSV.GD.ZS\",\n        \"value\": \"Trade in services (% of GDP)\"\n      },\n      \"country\": {\n        \"id\": \"CN\",\n        \"value\": \"China\"\n      },\n      \"countryiso3code\": \"CHN\",\n      \"date\": \"1960\",\n      \"value\": null,\n      \"unit\": \"\",\n      \"obs_status\": \"\",\n      \"decimal\": 1\n    }\n  ]\n],\n      loading: false,\n        code: 200\n  }\n}}}"
+    }
+  },
+  "impl": [
+    {
+      "id": "{{ $moduleId }}__line",
+      "type": "echarts/v1/line",
+      "properties": {
+        "notMerge": false,
+        "lazyUpdate": false,
+        "showLoading": "{{fetch_data.fetch.loading}}",
+        "title": {
+          "text": "{{i18n.t('line', { lng: lang })}}",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": ""
+        },
+        "grid": {
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": "24",
+          "containLabel": true
+        },
+        "xAxis": [
+          {
+            "name": "Year",
+            "type": "category",
+            "data": "{{\nArray.from(new Set(fetch_data.fetch.data[1]?.map(data=> data.date) ?? []))\n                           }}",
+            "nameLocation": "end",
+            "offset": 0,
+            "position": "bottom"
+          }
+        ],
+        "yAxis": [
+          {
+            "name": "Value",
+            "type": "value",
+            "data": [],
+            "nameLocation": "end",
+            "offset": 0,
+            "position": "left"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis",
+          "triggerOn": "mousemove"
+        },
+        "legend": {
+          "show": true,
+          "data": [],
+          "type": "scroll",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": "",
+          "icon": "circle"
+        },
+        "color": [],
+        "series": "{{\n(fetch_data.fetch?.data?.[1] ?? []).reduce((result, data)=> {\n  const categories = result.map((series) => series.name);\n  const categoryIndex = categories.indexOf(data.country.value);\n\n  if (categoryIndex === -1) {\n    result.push({\n      name: data.country.value,\n      data: [data.value],\n    });\n  } else {\n    result[categoryIndex].data.push(data.value);\n  }\n  \n  return result\n}, []) ?? []\n}}"
+      },
+      "traits": [
+        {
+          "type": "core/v1/style",
+          "properties": {
+            "styles": [
+              {
+                "styleSlot": "wrapper",
+                "style": "margin-top: 24px;"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "{{ $moduleId }}__bar",
+      "type": "echarts/v1/bar",
+      "properties": {
+        "notMerge": false,
+        "lazyUpdate": false,
+        "showLoading": false,
+        "title": {
+          "text": "{{i18n.t('bar', { lng: lang })}}",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": ""
+        },
+        "grid": {
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": "",
+          "containLabel": true
+        },
+        "xAxis": [
+          {
+            "name": "",
+            "type": "category",
+            "data": [
+              "Dimension 1",
+              "Dimension 2"
+            ],
+            "nameLocation": "center",
+            "offset": 0,
+            "position": "bottom"
+          }
+        ],
+        "yAxis": [
+          {
+            "name": "",
+            "type": "value",
+            "data": [],
+            "nameLocation": "center",
+            "offset": 0,
+            "position": "left"
+          }
+        ],
+        "tooltip": {
+          "trigger": "axis",
+          "triggerOn": "mousemove"
+        },
+        "legend": {
+          "show": true,
+          "data": [],
+          "type": "scroll",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": ""
+        },
+        "color": [],
+        "series": [
+          {
+            "name": "Series 1",
+            "label": {
+              "show": false,
+              "position": "top"
+            },
+            "data": [
+              1,
+              2
+            ],
+            "barWidth": "",
+            "barGap": "",
+            "barCategoryGap": "",
+            "stack": "",
+            "showBackground": false
+          },
+          {
+            "name": "Series 2",
+            "label": {
+              "show": false,
+              "position": "top"
+            },
+            "data": [
+              3,
+              4
+            ],
+            "barWidth": "",
+            "barGap": "",
+            "barCategoryGap": "",
+            "stack": "",
+            "showBackground": false
+          }
+        ]
+      },
+      "traits": []
+    },
+    {
+      "id": "{{ $moduleId }}__pie",
+      "type": "echarts/v1/pie",
+      "properties": {
+        "notMerge": false,
+        "lazyUpdate": false,
+        "showLoading": false,
+        "title": {
+          "text": "{{i18n.t('pie', { lng: lang })}}",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": ""
+        },
+        "grid": {
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": "",
+          "containLabel": true
+        },
+        "tooltip": {
+          "trigger": "item",
+          "triggerOn": "mousemove"
+        },
+        "legend": {
+          "show": true,
+          "data": [],
+          "type": "scroll",
+          "left": "",
+          "right": "",
+          "top": "",
+          "bottom": ""
+        },
+        "color": [],
+        "series": [
+          {
+            "name": "Series 1",
+            "label": {
+              "show": false,
+              "position": "inside"
+            },
+            "data": [
+              {
+                "name": "A",
+                "value": 1
+              },
+              {
+                "name": "B",
+                "value": 2
+              }
+            ]
+          }
+        ]
+      },
+      "traits": [
+        {
+          "type": "custom/v1/animation",
+          "properties": {
+            "isVisible": "{{{{ $moduleId }}__pie.isVisible}}"
+          }
+        }
+      ]
+    }
+  ]
+}

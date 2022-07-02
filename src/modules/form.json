@@ -1,0 +1,190 @@
+{
+  "kind": "Module",
+  "parsedVersion": {
+    "category": "custom/v1",
+    "value": "myModule0"
+  },
+  "version": "custom/v1",
+  "metadata": {
+    "name": "form",
+    "description": "my module"
+  },
+  "spec": {
+    "stateMap": {},
+    "events": [],
+    "properties": {},
+    "exampleProperties": {
+      "lang": "en-US"
+    }
+  },
+  "impl": [
+    {
+      "id": "{{ $moduleId }}__name_form_item",
+      "type": "arco/v1/formControl",
+      "properties": {
+        "label": {
+          "format": "plain",
+          "raw": "{{i18n.t('name', { lng: lang })}}"
+        },
+        "layout": "horizontal",
+        "required": false,
+        "hidden": false,
+        "extra": "",
+        "errorMsg": "",
+        "labelAlign": "left",
+        "colon": false,
+        "help": "",
+        "labelCol": {
+          "span": 3,
+          "offset": 0
+        },
+        "wrapperCol": {
+          "span": 21,
+          "offset": 0
+        }
+      },
+      "traits": []
+    },
+    {
+      "id": "{{ $moduleId }}__name_input",
+      "type": "arco/v1/input",
+      "properties": {
+        "allowClear": false,
+        "disabled": false,
+        "readOnly": false,
+        "defaultValue": "",
+        "updateWhenDefaultValueChanges": false,
+        "placeholder": "{{i18n.t('placeholder', { lng: lang })}}",
+        "error": false,
+        "size": "default"
+      },
+      "traits": [
+        {
+          "type": "core/v1/slot",
+          "properties": {
+            "container": {
+              "id": "{{ $moduleId }}__name_form_item",
+              "slot": "content"
+            },
+            "ifCondition": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "{{ $moduleId }}__area_form_item",
+      "type": "arco/v1/formControl",
+      "properties": {
+        "label": {
+          "format": "plain",
+          "raw": "{{i18n.t('area', { lng: lang })}}"
+        },
+        "layout": "horizontal",
+        "required": false,
+        "hidden": false,
+        "extra": "",
+        "errorMsg": "",
+        "labelAlign": "left",
+        "colon": false,
+        "help": "",
+        "labelCol": {
+          "span": 3,
+          "offset": 0
+        },
+        "wrapperCol": {
+          "span": 21,
+          "offset": 0
+        }
+      },
+      "traits": []
+    },
+    {
+      "id": "{{ $moduleId }}__area_select",
+      "type": "arco/v1/select",
+      "properties": {
+        "allowClear": false,
+        "multiple": false,
+        "allowCreate": false,
+        "bordered": true,
+        "defaultValue": "Beijing",
+        "disabled": false,
+        "labelInValue": false,
+        "loading": false,
+        "showSearch": false,
+        "unmountOnExit": false,
+        "options": [
+          {
+            "value": "Beijing",
+            "text": "{{i18n.t('beijing', { lng: lang })}}"
+          },
+          {
+            "value": "London",
+            "text": "{{i18n.t('london', { lng: lang  })}}"
+          },
+          {
+            "value": "NewYork",
+            "text": "{{i18n.t('newYork', { lng: lang })}}"
+          }
+        ],
+        "placeholder": "Select city",
+        "size": "default",
+        "error": false,
+        "updateWhenDefaultValueChanges": false
+      },
+      "traits": [
+        {
+          "type": "core/v1/slot",
+          "properties": {
+            "container": {
+              "id": "{{ $moduleId }}__area_form_item",
+              "slot": "content"
+            },
+            "ifCondition": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "{{ $moduleId }}__submit_button",
+      "type": "arco/v1/button",
+      "properties": {
+        "type": "primary",
+        "status": "default",
+        "long": false,
+        "size": "default",
+        "disabled": false,
+        "loading": false,
+        "shape": "square",
+        "text": "{{i18n.t('submit', { lng: lang })}}"
+      },
+      "traits": [
+        {
+          "type": "core/v1/event",
+          "properties": {
+            "handlers": [
+              {
+                "type": "onClick",
+                "componentId": "$utils",
+                "method": {
+                  "name": "arco/v1/message",
+                  "parameters": {
+                    "type": "success",
+                    "content": "{{i18n.t('submit_success', { lng: lang })}}{{i18n.t('name', { lng: lang })}}: {{{{ $moduleId }}__name_input.value}};{{i18n.t('area', { lng: lang })}}: {{{{ $moduleId }}__area_select.value}}",
+                    "position": "top",
+                    "closable": false,
+                    "duration": 1000
+                  }
+                },
+                "disabled": false,
+                "wait": {
+                  "type": "delay",
+                  "time": 0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
