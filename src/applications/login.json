@@ -2,7 +2,7 @@
   "version": "sunmao/v1",
   "kind": "Application",
   "metadata": {
-    "name": "welcome"
+    "name": "login"
   },
   "spec": {
     "components": [
