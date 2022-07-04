@@ -1,11 +1,8 @@
-import { SunmaoLib } from '@sunmao-ui/runtime';
-// components
 import Font from './components/Font';
-// traits
 import animation from './traits/animation';
-// util methods
-import i18n from './methods/i18n';
-import navigate from './methods/navigate';
+import i18n from './utilMethods/i18n';
+import navigate from './utilMethods/navigate';
+import { type SunmaoLib } from '@sunmao-ui/runtime';
 
 const lib: SunmaoLib = {
   components: [Font],

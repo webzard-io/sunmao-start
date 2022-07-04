@@ -1,0 +1,6 @@
+{
+  "kind": "Application",
+  "version": "custom/v1",
+  "metadata": { "name": "appName" },
+  "spec": { "components": [] }
+}
