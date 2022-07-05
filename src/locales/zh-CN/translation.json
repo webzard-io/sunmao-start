@@ -1,0 +1,18 @@
+{
+  "input_username": "请输入用户名",
+  "input_password": "请输入密码",
+  "login": "登录",
+  "form": "表单页",
+  "chart": "图表页",
+  "name": "姓名",
+  "area": "地区",
+  "submit": "提交",
+  "beijing": "北京",
+  "london": "伦敦",
+  "newYork": "纽约",
+  "placeholder": "请输入姓名",
+  "submit_success": "提交成功！",
+  "line": "折线图",
+  "bar": "柱状图",
+  "pie": "饼图"
+}

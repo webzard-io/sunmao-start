@@ -1,0 +1,773 @@
+{
+  "version": "sunmao/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "admin"
+  },
+  "spec": {
+    "components": [
+      {
+        "id": "root",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 0,
+          "direction": "vertical",
+          "align": "auto",
+          "wrap": false,
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "rgba(240, 240, 240, 0.36)",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": "100%"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "header",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "horizontal",
+          "align": "center",
+          "wrap": false,
+          "justify": "space-between"
+        },
+        "traits": [
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;\nz-index: 1;\nbox-sizing: border-box;",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": "64px",
+                    "paddingLeft": "16px",
+                    "paddingRight": "16px"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "root",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "type": "custom/v1/font",
+        "properties": {
+          "text": "SunmaoUI"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "header",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "",
+                  "cssProperties": {
+                    "fontSize": "24px",
+                    "fontWeight": "700"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lang_dropdown",
+        "type": "arco/v1/dropdown",
+        "properties": {
+          "text": "Click",
+          "dropdownType": "default",
+          "trigger": "click",
+          "position": "bl",
+          "disabled": false,
+          "defaultPopupVisible": false,
+          "list": [
+            {
+              "key": "en-US",
+              "label": "English"
+            },
+            {
+              "key": "zh-CN",
+              "label": "中文"
+            }
+          ],
+          "autoAlignPopupWidth": true,
+          "unmountOnExit": false
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "header",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": [
+                {
+                  "type": "onClickMenuItem",
+                  "componentId": "language",
+                  "method": {
+                    "name": "setValue",
+                    "parameters": {
+                      "key": "value",
+                      "value": "{{lang_dropdown.selectedItemKey}}"
+                    }
+                  },
+                  "disabled": false,
+                  "wait": {
+                    "type": "delay",
+                    "time": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lang_button",
+        "type": "arco/v1/button",
+        "properties": {
+          "type": "text",
+          "status": "default",
+          "long": false,
+          "size": "default",
+          "disabled": false,
+          "loading": false,
+          "shape": "square",
+          "text": "{{language_map.value[language.value] || 'English'}}"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "lang_dropdown",
+                "slot": "trigger"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": []
+            }
+          }
+        ]
+      },
+      {
+        "id": "main",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": null,
+          "direction": "horizontal",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "flex: 1;\nmin-height: 0;",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": ""
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "root",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "menu",
+        "type": "arco/v1/menu",
+        "properties": {
+          "mode": "vertical",
+          "autoOpen": false,
+          "collapse": false,
+          "autoScrollIntoView": false,
+          "hasCollapseButton": false,
+          "items": [
+            {
+              "key": "form",
+              "text": "{{i18n.t('form', { lng: language.value })}}"
+            },
+            {
+              "key": "chart",
+              "text": "{{i18n.t('chart', { lng: language.value })}}"
+            }
+          ],
+          "ellipsis": false,
+          "defaultActiveKey": "form",
+          "updateWhenDefaultValueChanges": false
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "main",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;",
+                  "cssProperties": {
+                    "width": "200px",
+                    "backgroundColor": "rgba(255, 255, 255, 1)",
+                    "paddingTop": "16px",
+                    "paddingBottom": "16px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "content",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "horizontal",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "main",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "display: block;\nflex: 1;",
+                  "cssProperties": {
+                    "0": "d",
+                    "1": "i",
+                    "2": "s",
+                    "3": "p",
+                    "4": "l",
+                    "5": "a",
+                    "6": "y",
+                    "7": ":",
+                    "8": " ",
+                    "9": "b",
+                    "10": "l",
+                    "11": "o",
+                    "12": "c",
+                    "13": "k",
+                    "14": ";",
+                    "15": "\n",
+                    "16": "m",
+                    "17": "a",
+                    "18": "x",
+                    "19": "-",
+                    "20": "h",
+                    "21": "e",
+                    "22": "i",
+                    "23": "g",
+                    "24": "h",
+                    "25": "t",
+                    "26": ":",
+                    "27": " ",
+                    "28": "1",
+                    "29": "0",
+                    "30": "0",
+                    "31": "%",
+                    "32": ";",
+                    "33": "\n",
+                    "34": "o",
+                    "35": "v",
+                    "36": "e",
+                    "37": "r",
+                    "38": "f",
+                    "39": "l",
+                    "40": "o",
+                    "41": "w",
+                    "42": ":",
+                    "43": " ",
+                    "44": "a",
+                    "45": "u",
+                    "46": "t",
+                    "47": "o",
+                    "48": ";",
+                    "49": "\n",
+                    "50": "f",
+                    "51": "l",
+                    "52": "e",
+                    "53": "x",
+                    "54": ":",
+                    "55": " ",
+                    "56": "1",
+                    "57": ";",
+                    "paddingLeft": "16px",
+                    "paddingTop": "24px",
+                    "paddingRight": "16px",
+                    "paddingBottom": "48px",
+                    "backgroundColor": ""
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "content_stack",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 8,
+          "direction": "vertical",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "content",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": "100%"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "content_title",
+        "type": "core/v1/text",
+        "properties": {
+          "value": {
+            "raw": "{{menu_map.value[menu.activeKey]}}",
+            "format": "plain"
+          }
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "content_stack",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "display: block;",
+                  "cssProperties": {
+                    "0": "d",
+                    "1": "i",
+                    "2": "s",
+                    "3": "p",
+                    "4": "l",
+                    "5": "a",
+                    "6": "y",
+                    "7": ":",
+                    "8": " ",
+                    "9": "b",
+                    "10": "l",
+                    "11": "o",
+                    "12": "c",
+                    "13": "k",
+                    "14": ";",
+                    "fontSize": "18px",
+                    "fontWeight": "700",
+                    "marginBottom": ""
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "content_main",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "horizontal",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "content_stack",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "display: block;\nflex: 1;\nmax-height: 100%;\noverflow: auto;\nbox-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;",
+                  "cssProperties": {
+                    "0": "d",
+                    "1": "i",
+                    "2": "s",
+                    "3": "p",
+                    "4": "l",
+                    "5": "a",
+                    "6": "y",
+                    "7": ":",
+                    "8": " ",
+                    "9": "b",
+                    "10": "l",
+                    "11": "o",
+                    "12": "c",
+                    "13": "k",
+                    "14": ";",
+                    "backgroundColor": "rgba(255, 255, 255, 1)",
+                    "paddingTop": "16px",
+                    "paddingLeft": "16px",
+                    "paddingBottom": "16px",
+                    "paddingRight": "16px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "form_stack",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "horizontal",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "content_main",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "display: block;",
+                  "cssProperties": {}
+                }
+              ]
+            }
+          },
+          {
+            "type": "core/v1/hidden",
+            "properties": {
+              "hidden": "{{menu.activeKey !== 'form'}}"
+            }
+          },
+          {
+            "type": "custom/v1/animation",
+            "properties": {
+              "isVisible": "{{form_stack.isVisible}}",
+              "duration": 0.8,
+              "from": "opacity: 0; transform: translateY(50px);"
+            }
+          }
+        ]
+      },
+      {
+        "id": "form_module",
+        "type": "core/v1/moduleContainer",
+        "properties": {
+          "id": "form_module",
+          "type": "custom/v1/form",
+          "properties": {
+            "lang": "{{language.value || 'en-US'}}",
+            "i18n": "{{i18n}}"
+          },
+          "handlers": []
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "form_stack",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "style": "width: 100%;",
+                  "cssProperties": {}
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "chart_stack",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "vertical",
+          "align": "flex-start",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "content_main",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "display: block;",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": "100%"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "core/v1/hidden",
+            "properties": {
+              "hidden": "{{menu.activeKey !== 'chart'}}"
+            }
+          },
+          {
+            "type": "custom/v1/animation",
+            "properties": {
+              "isVisible": "{{chart_stack.isVisible}}",
+              "from": "opacity: 0; transform: translateY(50px);",
+              "duration": 0.8
+            }
+          }
+        ]
+      },
+      {
+        "id": "chart_module",
+        "type": "core/v1/moduleContainer",
+        "properties": {
+          "id": "chart_module",
+          "type": "custom/v1/chart",
+          "properties": {
+            "lang": "{{language.value}}",
+            "i18n": "{{i18n}}",
+            "fetch_data": "{{fetch_data}}"
+          },
+          "handlers": []
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "chart_stack",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": []
+            }
+          }
+        ]
+      },
+      {
+        "id": "language_map",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/state",
+            "properties": {
+              "key": "value",
+              "initialValue": "{{\n{\n  'en-US': 'English',\n  'zh-CN': '中文'\n}\n}}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "menu_map",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/transformer",
+            "properties": {
+              "key": "value",
+              "value": "{{{\n  form: i18n.t('form', { lng: language.value }),\n  chart: i18n.t('chart', { lng: language.value }),\n}}}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "fetch_data",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/fetch",
+            "properties": {
+              "url": "http://api.worldbank.org/V2/country/CHN/indicator/BG.GSR.NFSV.GD.ZS?format=json&date=1960%3A2019&per_page=100",
+              "method": "get",
+              "lazy": false,
+              "disabled": false,
+              "headers": {},
+              "body": {},
+              "bodyType": "json",
+              "onComplete": [],
+              "onError": []
+            }
+          }
+        ]
+      },
+      {
+        "id": "language",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/localStorage",
+            "properties": {
+              "key": "value",
+              "initialValue": "en-US"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

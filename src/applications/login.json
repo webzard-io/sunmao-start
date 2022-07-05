@@ -1,0 +1,414 @@
+{
+  "version": "sunmao/v1",
+  "kind": "Application",
+  "metadata": {
+    "name": "login"
+  },
+  "spec": {
+    "components": [
+      {
+        "id": "root",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "vertical",
+          "align": "center",
+          "wrap": "",
+          "justify": "center"
+        },
+        "traits": [
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "background: url('/assets/images/background.png') no-repeat;\nbackground-size: cover;\nbackground-position: center;",
+                  "cssProperties": {
+                    "width": "100%",
+                    "height": "100%"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lang_stack",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "horizontal",
+          "align": "auto",
+          "wrap": "",
+          "justify": ""
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "root",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "position: absolute;\nright: 16px;\ntop: 16px;",
+                  "cssProperties": {}
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lang_dropdown",
+        "type": "arco/v1/dropdown",
+        "properties": {
+          "text": "Click",
+          "dropdownType": "default",
+          "trigger": "click",
+          "position": "bl",
+          "disabled": false,
+          "defaultPopupVisible": false,
+          "list": [
+            {
+              "key": "en-US",
+              "label": "English"
+            },
+            {
+              "key": "zh-CN",
+              "label": "中文"
+            }
+          ],
+          "autoAlignPopupWidth": true,
+          "unmountOnExit": false
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "lang_stack",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": []
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": [
+                {
+                  "type": "onClickMenuItem",
+                  "componentId": "language",
+                  "method": {
+                    "name": "setValue",
+                    "parameters": {
+                      "key": "value",
+                      "value": "{{lang_dropdown.selectedItemKey}}"
+                    }
+                  },
+                  "disabled": false,
+                  "wait": {
+                    "type": "delay",
+                    "time": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "lang_button",
+        "type": "arco/v1/button",
+        "properties": {
+          "type": "text",
+          "status": "default",
+          "long": false,
+          "size": "default",
+          "disabled": false,
+          "loading": false,
+          "shape": "square",
+          "text": "{{language_map.value[language.value]}}"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "lang_dropdown",
+                "slot": "trigger"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": []
+            }
+          }
+        ]
+      },
+      {
+        "id": "container",
+        "type": "core/v1/stack",
+        "properties": {
+          "spacing": 12,
+          "direction": "vertical",
+          "align": "center",
+          "wrap": "",
+          "justify": "center"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "root",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "",
+                  "cssProperties": {
+                    "marginBottom": "64px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "type": "custom/v1/font",
+        "properties": {
+          "text": "SunmaoUI"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "container",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "",
+                  "cssProperties": {
+                    "fontSize": "96px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "usename_input",
+        "type": "arco/v1/input",
+        "properties": {
+          "allowClear": false,
+          "disabled": false,
+          "readOnly": false,
+          "defaultValue": "",
+          "updateWhenDefaultValueChanges": false,
+          "placeholder": "{{i18n.t('input_username', { lng: language.value })}}",
+          "error": false,
+          "size": "small"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "container",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": []
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "input",
+                  "style": "",
+                  "cssProperties": {
+                    "width": "256px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "password_input",
+        "type": "arco/v1/passwordInput",
+        "properties": {
+          "disabled": false,
+          "placeholder": "{{i18n.t('input_password', { lng: language.value })}}",
+          "error": false,
+          "size": "small",
+          "visibilityToggle": true
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "container",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "input",
+                  "style": "",
+                  "cssProperties": {
+                    "width": "256px"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "login_button",
+        "type": "arco/v1/button",
+        "properties": {
+          "type": "primary",
+          "status": "default",
+          "long": false,
+          "size": "default",
+          "disabled": false,
+          "loading": false,
+          "shape": "square",
+          "text": "{{i18n.t('login', { lng: language.value })}}"
+        },
+        "traits": [
+          {
+            "type": "core/v1/slot",
+            "properties": {
+              "container": {
+                "id": "container",
+                "slot": "content"
+              },
+              "ifCondition": true
+            }
+          },
+          {
+            "type": "core/v1/style",
+            "properties": {
+              "styles": [
+                {
+                  "styleSlot": "content",
+                  "style": "",
+                  "cssProperties": {
+                    "width": "256px"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "core/v1/event",
+            "properties": {
+              "handlers": [
+                {
+                  "type": "onClick",
+                  "componentId": "$utils",
+                  "method": {
+                    "name": "custom/v1/navigate",
+                    "parameters": {
+                      "path": "/admin"
+                    }
+                  },
+                  "disabled": false,
+                  "wait": {
+                    "type": "delay",
+                    "time": 0
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "language_map",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/state",
+            "properties": {
+              "key": "value",
+              "initialValue": "{{{\n  \"en-US\": \"English\",\n  \"zh-CN\": \"中文\"\n}}}"
+            }
+          }
+        ]
+      },
+      {
+        "id": "language",
+        "type": "core/v1/dummy",
+        "properties": {},
+        "traits": [
+          {
+            "type": "core/v1/localStorage",
+            "properties": {
+              "key": "value",
+              "initialValue": "en-US"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
