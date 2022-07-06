@@ -37,9 +37,12 @@ const sunmaoFsVitePlugin: (options: Options) => Plugin = options => {
       });
 
       server.middlewares.use(`${PREFIX}/modules`, async (req, res, next) => {
+        const moduleFiles = fs
+          .readdirSync(options.modulesDir)
+          .filter(moduleFile => moduleFile.includes('.json'));
+
         switch (req.method.toLowerCase()) {
           case 'get': {
-            const moduleFiles = fs.readdirSync(options.modulesDir);
             const moduleSchemas = await Promise.all(
               moduleFiles.map(async moduleFile => {
                 const schema = JSON.parse(
@@ -56,7 +59,6 @@ const sunmaoFsVitePlugin: (options: Options) => Plugin = options => {
             break;
           }
           case 'put': {
-            const moduleFiles = fs.readdirSync(options.modulesDir);
             const oldModuleNames = moduleFiles.map(fileName => fileName.split('.')[0]);
             const { value } = (req as any).body;
             const names = value.map(schema => schema.metadata.name);
