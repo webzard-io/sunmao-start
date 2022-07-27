@@ -21,11 +21,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  css: {
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
-  },
 });
