@@ -50,10 +50,8 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.25.1",
-    "less": "^3.10.3",
     "minimist": "^1.2.6",
     "prettier": "^2.3.2",
-    "sass": "^1.49.0",
     "typescript": "^4.5.4",
     "vite": "^3.0.3"
   },
