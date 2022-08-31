@@ -1,5 +1,4 @@
-import { implementUtilMethod } from '@sunmao-ui/runtime';
-import { StringUnion } from '@sunmao-ui/shared';
+import { implementUtilMethod, StringUnion } from '@sunmao-ui/runtime';
 import { Type } from '@sinclair/typebox';
 import i18n from '../../locales';
 

@@ -1,6 +1,5 @@
-import { implementRuntimeComponent } from '@sunmao-ui/runtime';
+import { implementRuntimeComponent, PRESET_PROPERTY_CATEGORY } from '@sunmao-ui/runtime';
 import { Type } from '@sinclair/typebox';
-import { PRESET_PROPERTY_CATEGORY } from '@sunmao-ui/shared';
 import { css, cx } from '@emotion/css';
 
 const ColorFontStyle = css`
