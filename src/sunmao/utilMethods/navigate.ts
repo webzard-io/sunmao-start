@@ -3,8 +3,7 @@ import { Type } from '@sinclair/typebox';
 import { history } from '../../components/Router';
 
 export default function i18nUtilMethodFactory() {
-  return [
-    implementUtilMethod({
+  return implementUtilMethod({
       version: 'custom/v1',
       metadata: {
         name: 'navigate',
@@ -16,6 +15,5 @@ export default function i18nUtilMethodFactory() {
       },
     })(({ path }) => {
       history.push(path);
-    }),
-  ];
+    });
 }

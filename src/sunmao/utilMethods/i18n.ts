@@ -4,8 +4,7 @@ import { Type } from '@sinclair/typebox';
 import i18n from '../../locales';
 
 export default function i18nUtilMethodFactory() {
-  return [
-    implementUtilMethod({
+  return implementUtilMethod({
       version: 'custom/v1',
       metadata: {
         name: 'i18n',
@@ -17,6 +16,5 @@ export default function i18nUtilMethodFactory() {
       },
     })(({ lang }) => {
       i18n.changeLanguage(lang);
-    }),
-  ];
+    });
 }
