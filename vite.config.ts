@@ -19,6 +19,14 @@ export default defineConfig({
         })),
       modulesDir: path.resolve(__dirname, './src/modules'),
     }),
-    react(),
+    react({
+      // https://github.com/vitejs/vite/issues/6215
+      jsxRuntime: 'classic',
+    }),
   ],
+  define: {
+    // react-codemirror2 need this
+    // https://github.com/scniro/react-codemirror2/issues/66
+    global: 'globalThis',
+  },
 });
