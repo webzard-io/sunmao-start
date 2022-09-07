@@ -23,7 +23,6 @@
     "@sunmao-ui/arco-lib": "^0.3.5-alpha.5",
     "@sunmao-ui/core": "^0.7.4-alpha.2",
     "@sunmao-ui/echarts-lib": "^0.2.0",
-    "@sunmao-ui/editor": "^0.7.5-alpha.5",
     "@sunmao-ui/runtime": "^0.7.4-alpha.4",
     "i18next": "^21.8.11",
     "react": "^17.0.2",
@@ -32,13 +31,15 @@
     "react-router-dom": "^6.2.2"
   },
   "devDependencies": {
+    "@optimize-lodash/rollup-plugin": "^3.0.0",
+    "@sunmao-ui/editor": "^0.7.5-alpha.5",
+    "@sunmao-ui/vite-plugin-fs": "^0.0.4-alpha.1",
     "@types/node": "^17.0.13",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "@vitejs/plugin-react": "^1.0.7",
-    "@sunmao-ui/vite-plugin-fs": "^0.0.4-alpha.1",
     "body-parser": "^1.19.1",
     "chalk": "^5.0.1",
     "eslint": "^7.32.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-react": "^7.25.1",
     "minimist": "^1.2.6",
     "prettier": "^2.3.2",
+    "rollup-plugin-visualizer": "^5.8.1",
     "typescript": "^4.5.4",
     "vite": "^3.0.3"
   },

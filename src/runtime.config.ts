@@ -1,5 +1,5 @@
 import { type SunmaoUIRuntimeProps } from '@sunmao-ui/runtime';
-import { ArcoDesignLib } from '@sunmao-ui/arco-lib';
+import { ArcoDesignLib } from '@sunmao-ui/arco-lib/dist/lib';
 import { EChartsLib } from '@sunmao-ui/echarts-lib';
 import lib from './sunmao/lib';
 import i18n from './locales';
