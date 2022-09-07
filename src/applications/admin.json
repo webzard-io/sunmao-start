@@ -591,10 +591,7 @@
         "properties": {
           "id": "form_module",
           "type": "custom/v1/form",
-          "properties": {
-            "lang": "{{language.value || 'en-US'}}",
-            "i18n": "{{i18n}}"
-          },
+          "properties": "{{{\n  \"lang\": \"{{language.value || 'en-US'}}\",\n  \"i18n\": \"{{i18n}}\"\n}}}",
           "handlers": []
         },
         "traits": [
@@ -679,11 +676,7 @@
         "properties": {
           "id": "chart_module",
           "type": "custom/v1/chart",
-          "properties": {
-            "lang": "{{language.value}}",
-            "i18n": "{{i18n}}",
-            "fetch_data": "{{fetch_data}}"
-          },
+          "properties": "{{{\n  \"lang\": \"{{language.value || 'en-US'}}\",\n  \"i18n\": \"{{i18n}}\",\n  \"fetch_data\": \"{{fetch_data}}\"\n}}}",
           "handlers": []
         },
         "traits": [

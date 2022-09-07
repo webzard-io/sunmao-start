@@ -245,7 +245,8 @@
         {
           "type": "custom/v1/animation",
           "properties": {
-            "isVisible": "{{{{ $moduleId }}__pie.isVisible}}"
+            "isVisible": "{{{{ $moduleId }}__pie.isVisible}}",
+            "duration": 0
           }
         }
       ]

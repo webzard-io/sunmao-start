@@ -2,7 +2,7 @@
   "name": "@sunmao-ui/start",
   "version": "0.0.0",
   "engines": {
-    "node": ">= 14"
+    "node": ">= 16"
   },
   "description": "The Sunmao project for the starters.",
   "main": "index.js",
@@ -20,11 +20,11 @@
   "dependencies": {
     "@emotion/css": "^11.7.1",
     "@sinclair/typebox": "^0.21.2",
-    "@sunmao-ui/arco-lib": "^0.3.5-alpha.4",
-    "@sunmao-ui/core": "^0.7.4-alpha.1",
+    "@sunmao-ui/arco-lib": "^0.3.5-alpha.5",
+    "@sunmao-ui/core": "^0.7.4-alpha.2",
     "@sunmao-ui/echarts-lib": "^0.2.0",
-    "@sunmao-ui/editor": "^0.7.5-alpha.4",
-    "@sunmao-ui/runtime": "^0.7.4-alpha.3",
+    "@sunmao-ui/editor": "^0.7.5-alpha.5",
+    "@sunmao-ui/runtime": "^0.7.4-alpha.4",
     "i18next": "^21.8.11",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -38,7 +38,7 @@
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "@vitejs/plugin-react": "^1.0.7",
-    "@sunmao-ui/vite-plugin-fs": "^0.0.4-alpha.0",
+    "@sunmao-ui/vite-plugin-fs": "^0.0.4-alpha.1",
     "body-parser": "^1.19.1",
     "chalk": "^5.0.1",
     "eslint": "^7.32.0",

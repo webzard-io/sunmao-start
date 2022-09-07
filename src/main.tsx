@@ -21,7 +21,7 @@ export default function App() {
               return type[type.length - 1];
             });
           const modules = await Promise.all(
-            moduleNames.map(name => import(`./modules/${name}.json`))
+            moduleNames.map(name => import(`./modules/${name}.json`).catch(() => null))
           );
 
           return {
@@ -29,7 +29,7 @@ export default function App() {
               return (
                 <SunmaoApp
                   application={application.default as Application}
-                  modules={modules}
+                  modules={modules.filter(v => v)}
                 />
               );
             },
