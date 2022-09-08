@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { initSunmaoUIEditor } from '@sunmao-ui/editor';
 import { type Application, type Module } from '@sunmao-ui/core';
 import { fetchApp, fetchModules, saveApp, saveModules } from './services';

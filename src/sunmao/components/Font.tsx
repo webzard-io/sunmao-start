@@ -1,3 +1,4 @@
+import React from 'react';
 import { implementRuntimeComponent, PRESET_PROPERTY_CATEGORY } from '@sunmao-ui/runtime';
 import { Type } from '@sinclair/typebox';
 import { css, cx } from '@emotion/css';
