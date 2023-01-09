@@ -5,43 +5,33 @@ import { fetchApp, fetchModules, saveApp, saveModules } from './services';
 import config from '../../src/runtime.config';
 import '@sunmao-ui/editor/dist/index.css';
 
-const DEFAULT_APP: Application = {
-  version: 'sunmao/v1',
-  kind: 'Application',
-  metadata: {
-    name: 'some App',
-  },
-  spec: {
-    components: [],
-  },
-};
-
 type Props = {
   name: string;
 };
 
 export default function SunmaoEditor(props: Props) {
   const { name } = props;
-  const [app, setApp] = useState<Application>(JSON.parse(JSON.stringify(DEFAULT_APP)));
-  const [modules, setModules] = useState<Module[]>([]);
+  const [app, setApp] = useState<Application | undefined>();
+  const [modules, setModules] = useState<Module[] | undefined>();
 
-  const { Editor } = useMemo(
-    () =>
-      initSunmaoUIEditor({
-        defaultApplication: app,
-        defaultModules: modules,
-        runtimeProps: config,
-        storageHandler: {
-          onSaveApp: function (app) {
-            return saveApp(name, app);
-          },
-          onSaveModules: function (modules) {
-            return saveModules(modules);
-          },
+  const SunmaoEditor = useMemo(() => {
+    if (!app || !modules) {
+      return null;
+    }
+    return initSunmaoUIEditor({
+      defaultApplication: app,
+      defaultModules: modules,
+      runtimeProps: config,
+      storageHandler: {
+        onSaveApp: function (app) {
+          return saveApp(name, app);
         },
-      }),
-    [app, modules, name]
-  );
+        onSaveModules: function (modules) {
+          return saveModules(modules);
+        },
+      },
+    });
+  }, [app, modules, name]);
 
   useEffect(() => {
     (async function () {
@@ -52,5 +42,6 @@ export default function SunmaoEditor(props: Props) {
     })();
   }, [name]);
 
-  return <Editor />;
+  if (!SunmaoEditor) return null;
+  return <SunmaoEditor.Editor />;
 }
